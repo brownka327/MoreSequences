@@ -88,10 +88,10 @@ def sum_radii(circles):
     # ------------------------------------------------------------------
 
     radii = 0
-
+    '''
     for k in range(len(circles)):
-        radii += circles.radius[k]
-
+        radii += circles[k]
+    '''
 
 # ----------------------------------------------------------------------
 # Some problems iterate (loop) through PART of the sequence,
@@ -154,9 +154,17 @@ def count_last_n_odds(integers, n):
       :type n:        int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+
+    count = 0
+
+    for k in range(len(integers)-n, len(integers)):
+        if integers[k] % 2:
+            count += 1
+
+    return count
 
 
 # ----------------------------------------------------------------------
@@ -231,6 +239,9 @@ def index_of_first_negative(numbers):
     # TODO: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+
+    for k in range(len(numbers)):
+
 
 
 def run_test_contains_an_a():
