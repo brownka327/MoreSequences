@@ -75,7 +75,7 @@ def sum_radii(circles):
       :type circles:  list[rg.Circle]    or tuple(rg.Circle)
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # Note: No fair using "slices" on ANY of these problems,
@@ -88,10 +88,12 @@ def sum_radii(circles):
     # ------------------------------------------------------------------
 
     radii = 0
-    '''
+
     for k in range(len(circles)):
-        radii += circles[k]
-    '''
+        radii += circles[k].radius
+
+    return radii
+
 
 # ----------------------------------------------------------------------
 # Some problems iterate (loop) through PART of the sequence,
@@ -236,11 +238,16 @@ def index_of_first_negative(numbers):
       :type numbers: list[float]   or tuple[float]
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
     for k in range(len(numbers)):
+        if numbers[k] < 0:
+            return k
+
+    return -1
+
 
 
 
@@ -296,7 +303,7 @@ def contains_an_a(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -310,6 +317,11 @@ def contains_an_a(s):
     #   No fair using the   count   or   find   string methods.
     # ------------------------------------------------------------------
 
+    for k in range(len(s)):
+        if s[k] == 'a':
+            return True
+
+    return False
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
